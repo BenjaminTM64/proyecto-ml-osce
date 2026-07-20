@@ -1,0 +1,50 @@
+{
+  "modelo_monto": {
+    "mae_soles": 84234.74821435014,
+    "mae_log": 0.4085704012555044,
+    "r2_log": 0.29941585655741665,
+    "n_train": 6611,
+    "n_test": 1653,
+    "features": [
+      "COD_INFRACCION",
+      "TIPO_PROVEEDOR",
+      "DURACION_DIAS"
+    ],
+    "nota": "Target entrenado en escala log1p(MONTO) por alta asimetria; predict_monto() revierte con expm1."
+  },
+  "modelo_infraccion": {
+    "accuracy": 0.7777777777777778,
+    "f1_macro": 0.22583869410421414,
+    "n_train": 6764,
+    "n_test": 1692,
+    "clases": [
+      "196",
+      "207",
+      "236",
+      "237",
+      "239",
+      "246",
+      "252",
+      "OTROS"
+    ],
+    "features": [
+      "TIPO_PROVEEDOR",
+      "MONTO_PROMEDIO_PREVIO",
+      "N_SANCIONES_PREVIAS",
+      "MES_INICIO",
+      "ANIO_INICIO"
+    ],
+    "nota": "Dataset desbalanceado: el código 237 concentra la gran mayoría de los casos. Se agruparon códigos con <15 observaciones en 'OTROS'."
+  },
+  "modelo_duracion": {
+    "mae_dias": 25.95158623815412,
+    "r2": 0.40930332452608176,
+    "n_train": 6611,
+    "n_test": 1653,
+    "features": [
+      "COD_INFRACCION",
+      "TIPO_PROVEEDOR",
+      "MONTO_NUM"
+    ]
+  }
+}
