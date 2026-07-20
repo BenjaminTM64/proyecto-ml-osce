@@ -68,7 +68,7 @@ def load_models():
 
 modelo_monto, modelo_infraccion, modelo_duracion, catalogo = load_models()
 
-CODIGOS_INFRACCION = sorted(catalogo.keys(), key=lambda x: int(x))
+CODIGOS_INFRACCION = sorted(list(catalogo.keys()))
 TIPOS_PROVEEDOR = ["PERSONA_NATURAL", "PERSONA_JURIDICA", "OTRO"]
 
 
